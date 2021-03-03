@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      campaignId: {
-        type: Sequelize.INTEGER
-      },
       file: {
         type: Sequelize.STRING
       },

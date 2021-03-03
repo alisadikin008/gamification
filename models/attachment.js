@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Attachment.init({
-    campaignId: DataTypes.INTEGER,
     file: DataTypes.STRING,
     status: DataTypes.STRING
   }, {

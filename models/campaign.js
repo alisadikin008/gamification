@@ -11,10 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Campaign.hasOne(models.Voucher, {
+        foreignKey: 'campaignId',
+        as: 'voucher'
+      });
     }
   };
   Campaign.init({
-    customerId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     url: DataTypes.STRING,
     closedAt: DataTypes.DATE
