@@ -2,14 +2,15 @@
 Campaign Gamification
 
 #usage
-Install Docker
 
-Clone this repo
+1. Install Docker
 
-CD to gamification(this repo)
+2. Clone this repo
 
-Build Docker image (docker build -t gamification:v1 .) 
+3. CD to gamification(this repo)
 
-Run Docker image (docker run -d --name gamification -p 3000:3000 gamification:v1)
+4. Build Docker image (docker build -t gamification:v1 .) 
 
-Open browser or postman 127.0.0.1:3000 or localhost:3000
+5. Run Docker image (docker run -d --name gamification -p 3000:3000 gamification:v1)
+
+6. Open browser or postman 127.0.0.1:3000 or localhost:3000
