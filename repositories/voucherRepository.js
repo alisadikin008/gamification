@@ -7,10 +7,15 @@ var queryVoucher = {}
 let voucherRepository = {
 
     findAll : (req) => {
-        if(generalHelper.isQueryStringExists(req.query,"status")){
-            if(req.query.status){
+        if(generalHelper.isQueryStringExists(req.query,"status") && generalHelper.isQueryStringExists(req.query,"status")){
+            if(req.query.status && req.query.campaignId){
                 queryVoucher = {
-                    status:req.query.status
+                    [Op.and]: [
+                        {
+                            campaignId: req.query.campaignId,
+                            status: req.query.status
+                        },
+                    ]
                 }
             }
         }
@@ -28,10 +33,15 @@ let voucherRepository = {
     },
 
     countAll : (req) => {
-        if(generalHelper.isQueryStringExists(req.query,"status")){
-            if(req.query.status){
+        if(generalHelper.isQueryStringExists(req.query,"status") && generalHelper.isQueryStringExists(req.query,"status")){
+            if(req.query.status && req.query.campaignId){
                 queryVoucher = {
-                    status:req.query.status
+                    [Op.and]: [
+                        {
+                            campaignId: req.query.campaignId,
+                            status: req.query.status
+                        },
+                    ]
                 }
             }
         }
