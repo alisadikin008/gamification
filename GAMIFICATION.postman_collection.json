@@ -54,7 +54,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"firstName\":\"Nicholas\",\n\t\"lastName\":\"Anelka\",\n\t\"email\":\"nicholas@anelka.me\",\n\t\"password\":\"password\",\n\t\"gender\":\"Male\",\n\t\"contactNumber\":\"081234567\",\n\t\"dateOfBirth\":\"2021-12-30\"\n}",
+							"raw": "{\n\t\"firstName\":\"Nicholas\",\n\t\"lastName\":\"Anelka\",\n\t\"email\":\"nicholas@anelka.com\",\n\t\"password\":\"password\",\n\t\"gender\":\"Male\",\n\t\"contactNumber\":\"081234567\",\n\t\"dateOfBirth\":\"2021-12-30\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -127,7 +127,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"customerId\":1,\n\t\"totalSpent\":100,\n\t\"totalSaving\":3.5\n}",
+							"raw": "{\n\t\"customerId\":2,\n\t\"totalSpent\":200,\n\t\"totalSaving\":6.5\n}",
 							"options": {
 								"raw": {
 									"language": "json"

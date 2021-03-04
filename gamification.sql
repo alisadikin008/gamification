@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.29)
 # Database: gamification
-# Generation Time: 2021-03-03 23:39:37 +0000
+# Generation Time: 2021-03-04 01:50:41 +0000
 # ************************************************************
 
 
@@ -39,7 +39,8 @@ LOCK TABLES `Attachments` WRITE;
 
 INSERT INTO `Attachments` (`id`, `file`, `status`, `createdAt`, `updatedAt`)
 VALUES
-	(1,'selfie_photo_with_product.png','true','2021-03-03 22:01:09','2021-03-03 22:01:09');
+	(1,'selfie_photo_with_product.png','true','2021-03-03 22:01:09','2021-03-03 22:01:09'),
+	(2,'selfie_photo_with_product2.png','true','2021-03-04 01:14:11','2021-03-04 01:14:11');
 
 /*!40000 ALTER TABLE `Attachments` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -55,6 +56,7 @@ CREATE TABLE `CampaignAttachments` (
   `customerId` int(11) DEFAULT NULL,
   `campaignId` int(11) DEFAULT NULL,
   `attachmentId` int(11) DEFAULT NULL,
+  `voucherId` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -63,9 +65,10 @@ CREATE TABLE `CampaignAttachments` (
 LOCK TABLES `CampaignAttachments` WRITE;
 /*!40000 ALTER TABLE `CampaignAttachments` DISABLE KEYS */;
 
-INSERT INTO `CampaignAttachments` (`id`, `customerId`, `campaignId`, `attachmentId`, `createdAt`, `updatedAt`)
+INSERT INTO `CampaignAttachments` (`id`, `customerId`, `campaignId`, `attachmentId`, `voucherId`, `createdAt`, `updatedAt`)
 VALUES
-	(1,1,1,1,'2021-03-03 21:58:47','2021-03-03 21:58:47');
+	(1,1,1,1,1,'2021-03-03 21:58:47','2021-03-03 21:58:47'),
+	(2,2,1,2,2,'2021-03-04 01:14:38','2021-03-04 01:14:38');
 
 /*!40000 ALTER TABLE `CampaignAttachments` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -121,7 +124,8 @@ LOCK TABLES `Customers` WRITE;
 
 INSERT INTO `Customers` (`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contactNumber`, `dateOfBirth`, `createdAt`, `updatedAt`)
 VALUES
-	(1,'Nicholas','Anelka','nicholas@anelka.me','$2a$10$4Bx8ehJ/CP.Z/VSl9DyiGel7x2QFDobSbWvl.mDtcYZ3JVro8x/9e','Male','081234567','2021-12-30','2021-03-03 21:59:15','2021-03-03 21:59:15');
+	(1,'Nicholas','Anelka','nicholas@anelka.me','$2a$10$4Bx8ehJ/CP.Z/VSl9DyiGel7x2QFDobSbWvl.mDtcYZ3JVro8x/9e','Male','081234567','2021-12-30','2021-03-03 21:59:15','2021-03-03 21:59:15'),
+	(2,'Nicholas','Anelka','nicholas@anelka.com','$2a$10$ijbs6o7.nQkbkaiCst4m2ORVB1ByxY2mTmD8lHnxZyLQwkyed423G','Male','081234567','2021-12-30','2021-03-04 01:12:43','2021-03-04 01:12:43');
 
 /*!40000 ALTER TABLE `Customers` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -174,7 +178,8 @@ LOCK TABLES `Transactions` WRITE;
 
 INSERT INTO `Transactions` (`id`, `customerId`, `totalSpent`, `totalSaving`, `createdAt`, `updatedAt`)
 VALUES
-	(1,1,100,4,'2021-03-03 21:59:31','2021-03-03 21:59:31');
+	(1,1,100,4,'2021-03-03 21:59:31','2021-03-03 21:59:31'),
+	(2,2,200,7,'2021-03-04 01:13:12','2021-03-04 01:13:12');
 
 /*!40000 ALTER TABLE `Transactions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -203,7 +208,7 @@ VALUES
 	(1,1,'ABC123','open','2021-03-03 21:59:42','2021-03-03 21:59:42'),
 	(2,1,'ABC234','open','2021-03-03 21:59:42','2021-03-03 21:59:42'),
 	(3,1,'ABC...','open','2021-03-03 21:59:42','2021-03-03 21:59:42'),
-	(4,1,'ABC345','open','2021-03-03 21:59:42','2021-03-03 21:59:42');
+	(4,1,'ABC345','locked','2021-03-03 21:59:42','2021-03-04 00:02:18');
 
 /*!40000 ALTER TABLE `Vouchers` ENABLE KEYS */;
 UNLOCK TABLES;

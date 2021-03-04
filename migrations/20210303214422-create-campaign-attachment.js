@@ -17,6 +17,9 @@ module.exports = {
       attachmentId: {
         type: Sequelize.INTEGER
       },
+      voucherId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

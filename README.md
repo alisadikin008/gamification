@@ -93,7 +93,8 @@
     - Payload with raw json type {
 	    "customerId":1,
 	    "campaignId":1,
-        "attachmentId":1
+      "attachmentId":1,
+      "voucherId":1
         }
        
     - # Method GET 

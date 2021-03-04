@@ -128,13 +128,7 @@ let customerAssociatedModel = {
                         as : "campaign",
                         attributes: { exclude: ['createdAt','updatedAt'] },
                         //order:[['permissionId','ASC']],
-                        include:
-                        { 
-                            model: Voucher,
-                            //required: true,
-                            as : "voucher",
-                            attributes: { exclude: ['id','createdAt','updatedAt'] },
-                        }
+                    
                     },
                     {
                         model: Attachment,
@@ -142,7 +136,14 @@ let customerAssociatedModel = {
                         as : "photoSelfie",
                         attributes: { exclude: ['id','createdAt','updatedAt'] },
                         //order:[['permissionId','ASC']],
-                    } 
+                    } ,
+                    { 
+                        model: Voucher,
+                        //required: true,
+                        as : "voucher",
+                        attributes: { exclude: ['id','createdAt','updatedAt'] },
+                    }
+                        
                 ]
             }
         ]

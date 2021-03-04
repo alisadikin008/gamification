@@ -19,12 +19,17 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'attachmentId',
         as: 'photoSelfie'
       });
+      CampaignAttachment.belongsTo(models.Voucher, {
+        foreignKey: 'voucherId',
+        as: 'voucher'
+      });
     }
   };
   CampaignAttachment.init({
     customerId: DataTypes.INTEGER,
     campaignId: DataTypes.INTEGER,
-    attachmentId: DataTypes.INTEGER
+    attachmentId: DataTypes.INTEGER,
+    voucherId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'CampaignAttachment',
